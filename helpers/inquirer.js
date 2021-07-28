@@ -76,6 +76,21 @@ const pausa = async() => {
 
 }
 
+const confirmacion = async( message ) => {
+    const pregunta = [
+
+        {
+            type : 'confirm',
+            name : 'ok',
+            message
+        }
+
+    ]
+
+    const {ok} = await inquirer.prompt(pregunta);
+    return ok;
+}
+
 const leerInput = async(message = '') => {
 
     const pregunta = [
@@ -97,10 +112,89 @@ const leerInput = async(message = '') => {
 
 }
 
+
+/**
+{
+    value: tarea.id, 
+    name: `${'1.'.green} descripcion.`
+},
+
+*/
+
+const listadoTareaParaBorrar = async(tareas = []) => {
+    //El metodo map recorre los elementos del array y crea otro array hijo
+    const choices = tareas.map( (tarea, index) => {
+
+        const idx = `${index + 1}.`.green;
+        return {
+            value : tarea.id,
+            name : `${idx} ${tarea.descripcion}`
+        }
+
+    } );
+    //Agrega al principio del array
+    choices.unshift({
+        value : '0',
+        name : '0.'.green + 'Cancelar.'
+    });
+
+    const preguntas = [
+
+        {
+            type : 'list',
+            name : 'id',
+            message : 'Borrar:',
+            choices 
+        }
+    ]
+    
+    const {id}  =  await inquirer.prompt(preguntas);
+
+    return id;
+}
+
+
+const listadoCheckList = async(tareas = []) => {
+    //El metodo map recorre los elementos del array y crea otro array hijo
+    const choices = tareas.map( (tarea, index) => {
+
+        const idx = `${index + 1}.`.green;
+        return {
+            //Value es lo que nos regresa
+            value : tarea.id,
+            name : `${idx} ${tarea.descripcion}`,
+            checked : tarea.completado
+        }
+
+    } );
+
+
+    const pregunta = [
+
+        {
+            type : 'checkbox',
+            name : 'ids',
+            message : 'Seleccione',
+            choices 
+        }
+    ]
+    
+    const {ids}  =  await inquirer.prompt(pregunta);
+
+    return ids;
+}
+
+
+
+
+
 module.exports = {
     menu,
     pausa,
-    leerInput
+    leerInput,
+    listadoTareaParaBorrar,
+    confirmacion,
+    listadoCheckList
 }
 
 

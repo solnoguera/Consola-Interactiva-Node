@@ -1,14 +1,1 @@
-[
-  {
-    "id": "268e0d5d-6665-498d-8f82-f838dab73fd5",
-    "descripcion": "Llamar al medico",
-    "date": "",
-    "completado": false
-  },
-  {
-    "id": "23fa7299-d185-4228-93a1-50bc524a95e2",
-    "descripcion": "Hacer tarea",
-    "date": "",
-    "completado": false
-  }
-]
+[{"id":"a877c334-f092-4f7d-a14f-1a5e0adbd777","descripcion":"Comprar mesa de luz","date":"","completado":false},{"id":"d9a8fa37-9652-4e4c-a5f5-712406e0bacd","descripcion":"Comprar mueblecito para los accesorios","date":"","completado":false},{"id":"6fa9d03a-0766-42e5-bf73-70e6471cb18d","descripcion":"Dar besos a mamona","date":"27-07-2021","completado":true},{"id":"d0bf4f03-6b03-4f0b-9289-e9d53cbdd5f2","descripcion":"Amar a Pu","date":"28-7-2021","completado":true},{"id":"4e00e0f5-deaf-4688-9de3-c6b35da143df","descripcion":"Pelearme con Popeye","date":"","completado":false},{"id":"1d0506c6-f4ad-4d3e-bce5-9aec57a8007e","descripcion":"xaparme a luca","date":"28-7-2021","completado":true},{"id":"93c917cc-2273-431d-b953-615a63bd74b7","descripcion":"Hacerme las pestañas","date":"","completado":false},{"id":"f98c2579-2d25-4eb8-8d41-ccc062957f24","descripcion":"Hacerme las uñas","date":"28-7-2021","completado":true}]

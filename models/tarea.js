@@ -12,9 +12,8 @@ class Tarea {
         this.descripcion = descripcion;
         //Utilizamos el método que importamos, el cual nos devuelve el ID único.
         this.id = v4()
-
+        
     }
-
 
 }
 
